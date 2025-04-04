@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Drag-and-Drop Website Builder Prototype
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Working Prototype
+- **Link**: https://67f042f19c7c32d82143e6d7--relaxed-gelato-eaefd8.netlify.app/
 
-## Available Scripts
+## Architecture Overview
 
-In the project directory, you can run:
+This application follows a **component-based architecture** using **React** and **React DnD** for a seamless drag-and-drop experience.
 
-### `npm start`
+### Core Components:
+- **Toolbar**: Contains draggable elements like text, image, and button.
+- **Canvas**: Drop zone to position and display elements.
+- **ElementForm**: Dynamic form to update properties of the selected element.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Data Flow:
+> Drag Element → Drop on Canvas → Update `elements` State → Re-render
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+##  Tools & Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tool/Library            | Purpose                                                                 |
+|-------------------------|-------------------------------------------------------------------------|
+| **React**               | Frontend framework for building the UI                                  |
+| **React DnD**           | Drag-and-drop library for React using HTML5 backend                     |
+| **JavaScript (ES6+)**   | Main scripting language                                                  |
+| **CSS Flexbox**         | Responsive and flexible layout                                           |
+| **HTML5 Backend**       | Enables native drag-and-drop functionality                              |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Design Decisions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Component Modularity
+- Promotes clean separation of concerns.
+- Easily extendable for new features or element types.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. React DnD
+- Provides full control over drag-and-drop logic.
+- Integrates well with React's declarative style.
 
-### `npm run eject`
+### 3. Form-Based Customization
+- Maintains the current UX for element editing via forms.
+- Offers intuitive property configuration post-placement.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. React State Hooks
+- `useState` manages the list of elements and the currently selected one.
+- Simple and scalable for future state management features (undo/redo, etc.).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Responsive Design
+- Flexbox ensures the layout adapts to various screen sizes.
+- Easily upgradable to use Tailwind or styled-components for production.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Key Features:
 
-## Learn More
+- Drag elements (text, button, image) from the toolbar onto the canvas.
+- Select any element and edit its properties using a form.
+- Responsive layout working across screen sizes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Undo/Redo Functionality**
+- **Support for More Elements** (forms, videos, carousels)
+- **Predefined Templates** using JSON
+- **Element Grouping & Resizing**
+- **Persistent Storage** (LocalStorage or Backend API)
+- **Export to HTML/CSS** for production-ready sites
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Summary
 
-### Analyzing the Bundle Size
+This prototype transforms the traditional form-based website builder into a modern, interactive, and flexible drag-and-drop system. It bridges intuitive UX with customizable controls, paving the way for a richer user-driven website creation experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+**Made with using React & React DnD**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
